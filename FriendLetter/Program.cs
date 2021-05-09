@@ -1,4 +1,4 @@
-Using System.IO;
+using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
 namespace FriendLetter
@@ -7,14 +7,14 @@ namespace FriendLetter
   {
     public static void Main(string[] args)
     {
-      WebHostBuilder host = new WebHostBuilder()
+      var host = new WebHostBuilder()
         .UseKestrel()
         .UseContentRoot(Directory.GetCurrentDirectory())
         .UseIISIntegration()
         .UseStartup<Startup>()
         .Build();
 
-      host.Run()
+      host.Run();
     }
   }
 }

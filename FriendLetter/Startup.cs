@@ -10,8 +10,8 @@ namespace FriendLetter
   {
     public Startup(IWebHostEnvironment env)
     {
-      ConfigurationBuilder builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath);
+      var builder = new ConfigurationBuilder()
+        .SetBasePath(env.ContentRootPath)
         .AddEnvironmentVariables();
       Configuration = builder.Build();
     }
